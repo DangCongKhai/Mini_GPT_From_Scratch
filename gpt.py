@@ -126,8 +126,12 @@ class MiniGPT(nn.Module):
         )
         self.norm_final = nn.LayerNorm(d_model)
         self.output = nn.Linear(d_model, vocab_size)
+        self.context_size = context_size
 
     def forward(self, X, attention_mask=None):
+        N = X.shape[1]
+        if N >= self.context_size:
+            X = X[:, -self.context_size :]
         X = self.positional_embedding(self.embedding(X))
         for gpt_block in self.gpt_blocks:
             X = gpt_block(X, attention_mask)
