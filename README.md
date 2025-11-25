@@ -2,7 +2,7 @@
 
 This repo provides a complete educational implementation of a GPT-style language model built from the ground up using PyTorch. This project demonstrates every component of modern LLMs, from tokenization to text generation.
 
-## 📦 Project setup
+## Project Setup
 
 1. Clone the repository: `git clone https://github.com/DangCongKhai/Mini_GPT_From_Scratch.git`
 2. Dependencies: 
@@ -10,14 +10,7 @@ This repo provides a complete educational implementation of a GPT-style language
 - Install the dependencies: In your terminal, run `uv sync`
 
 
-## 🎯 What You'll Learn
-
-- **Byte Pair Encoding (BPE)**: Build a custom tokenizer from scratch using the same algorithm as GPT-2/GPT-3
-- **Self-Attention Mechanism**: Understand how transformers process sequential data
-- **Positional Encoding**: Learn how models encode position information
-- **GPT Architecture**: Implement the decoder-only transformer architecture with masked multi-head attention
-
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 ├── tokenizer.py       # BPE tokenizer implementation (V1 & V2)
@@ -27,7 +20,7 @@ This repo provides a complete educational implementation of a GPT-style language
 └── results/          # Training metrics and checkpoints
 ```
 
-## 🚀 Key Features
+## Key Features
 
 - **Custom Tokenizer**: Two implementations of BPE with special token support
 - **Modular Architecture**: 
@@ -36,10 +29,10 @@ This repo provides a complete educational implementation of a GPT-style language
   - Feed-forward networks with GELU activation
   - Layer normalization and residual connections
 - **Training Pipeline**: Complete workflow from data loading to text generation
-- **Educational Focus**: Clear, well-commented code for learning
 
 
-## 🎓 Model Configuration
+
+## Model Configuration
 
 Depending on your hardware, you can adjust the following parameters to train the model:
 
@@ -50,13 +43,28 @@ Depending on your hardware, you can adjust the following parameters to train the
 - Decoder Layers: 3
 - Training Data: Educational philosophy texts
 
-## 💡 Usage
+## Model Performance
+
+The model was trained for 8 epochs on educational philosophy texts:
+
+| Metric | Training | Validation |
+|--------|----------|------------|
+| **Final Loss** | 1.043 | 0.628 |
+| **Final Perplexity** | 2.84 | 1.88 |
+| **Best Epoch** | 8 | 8 |
+
+### Training Progress
+
+- **Initial Loss**: 2.84 → **Final Loss**: 1.04 (63% improvement)
+- **Initial Perplexity**: 21.89 → **Final Perplexity**: 2.84 (87% improvement)
+
+## Usage
 
 1. **Train Tokenizer**: Build BPE vocabulary from your text corpus. Check 'tokenizer.py' for the implementation.
 2. **Train Model**: Run the training loop with your dataset. Check 'gpt.py' for the implementation.
 3. **Generate Text**: Use the trained model for text generation. Check 'main.ipynb' for the implementation.
 
-## 📚 Materials
+## Materials
 
 
 **Tokenizer**
