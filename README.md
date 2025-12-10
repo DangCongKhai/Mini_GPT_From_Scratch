@@ -6,7 +6,7 @@ This repo provides a complete educational implementation of a GPT-style language
 
 1. Clone the repository: `git clone https://github.com/DangCongKhai/Mini_GPT_From_Scratch.git`
 2. Dependencies: 
-- Install uv from [here](https://docs.astral.sh/uv/installation/)
+- Install uv from [here](https://docs.astral.sh/uv/getting-started/installation/)
 - Install the dependencies: In your terminal, run `uv sync`
 
 
